@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 100vh;
     height: 100vh;
 
     align-items: center;
@@ -20,14 +19,6 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
 
-        input {
-        border: 1px solid #D5D5D5;
-
-            &::placeholder {
-                padding-left: 10px;
-            }
-        }
-
         button {
             background-color: #52B6FF;
             color: #FFFFFF;
@@ -45,7 +36,7 @@ const Container = styled.div`
     }
 
     button, input {
-        width: 90%;
+        min-width: 90%;
         height: 40px;
         border-radius: 5px;
     }

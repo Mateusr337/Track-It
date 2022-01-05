@@ -2,9 +2,19 @@
 
 body {
     font-family: 'Lexend Deca', sans-serif;
+    width: 100vw;
+    height: 100vh;
 }
 
 *{
     box-sizing: border-box;
+}
+
+input {
+    padding-left: 10px;
+    border: 1px solid #D5D5D5;
+}
+input::placeholder {
+    font-style: italic;
 }
 

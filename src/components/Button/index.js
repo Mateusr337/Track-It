@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export default function Button({ text, type, destiny }) {
+export default function Button({ text, type, destiny, action }) {
+
     return (
         <Link to={destiny} >
-            <Container type={type} >
+            <Container type={type} onClick={action}>
                 <span>{text}</span>
             </ Container>
         </Link>
