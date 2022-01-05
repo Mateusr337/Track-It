@@ -4,19 +4,22 @@ import './reset.css';
 import './style.css';
 import PageLogin from "./components/PageLogin";
 import PageRegister from "./components/PageRegister";
+import PageHabits from "./components/PageHabits";
+import PageToday from "./components/PageToday";
 import { useState } from "react";
-import PageHabits from "./components/PageHabits/PageHabits";
+
 
 function App() {
 
-    const [user, setUser] = useState({});
+    const [loading, setLoading] = useState(false);
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<PageLogin user={user} setUser={setUser} />} />
-                <Route path='/cadastro' element={<PageRegister />} />
-                <Route path='/habitos' element={<PageHabits />} />
+                <Route path='/' element={<PageLogin loading={loading} setLoading={setLoading} />} />
+                <Route path='/cadastro' element={<PageRegister loading={loading} setLoading={setLoading} />} />
+                <Route path='/habitos' element={<PageHabits loading={loading} setLoading={setLoading} />} />
+                <Route path='/hoje' element={<PageToday loading={loading} setLoading={setLoading} />} />
             </Routes>
         </BrowserRouter>
     )
