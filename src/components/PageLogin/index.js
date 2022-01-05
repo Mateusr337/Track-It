@@ -9,7 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 
-export default function PageLogin({ loading, setLoading }) {
+export default function PageLogin({ loading, setLoading, setUserData }) {
 
     const navigate = useNavigate();
     const [userLogin, setUserLogin] = useState({
@@ -25,8 +25,7 @@ export default function PageLogin({ loading, setLoading }) {
         promise.then(response => {
             navigate('/hoje');
             setLoading(false);
-            localStorage.clear();
-            localStorage.setItem('userData', response);
+            setUserData(response.data);
         });
         promise.catch(err => {
             setLoading(false);
