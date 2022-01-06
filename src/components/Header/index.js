@@ -5,7 +5,6 @@ import { Container } from './style';
 export default function Header() {
 
     const { user } = useAuth();
-    console.log(user);
 
     return (
         user !== null && (

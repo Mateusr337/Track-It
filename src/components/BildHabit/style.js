@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-width: 90vw;
 height: 180px;
 padding: 18px;
-margin: 0 18px;
+margin: 0 18px 30px;
 
 background-color: #fff;
 border-radius: 5px;
@@ -37,6 +36,11 @@ font-size: 15.976px;
 line-height: 20px;
 color: #52B6FF;
 text-align: center;
+${props => props.loading && 'opacity: 0.5;'}
+
+&:hover{
+    cursor: pointer;
+}
 `
 
 export const Save = styled.div`
@@ -46,8 +50,13 @@ height: 35px;
 background: #52B6FF;
 color: #fff;
 border-radius: 4.63636px;
+${props => props.loading && 'opacity: 0.5;'}
 
 display: flex;
 justify-content: center;
 align-items: center;
+
+&:hover{
+    cursor: pointer;
+}
 `

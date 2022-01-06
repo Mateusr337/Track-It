@@ -15,13 +15,16 @@ export default function PageLogin() {
 
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
-    const { setUser } = useAuth();
+    const { user, setUser } = useAuth();
+
+    if (user !== null) {
+        navigate('/hoje');
+    }
 
     const [userLogin, setUserLogin] = useState({
         email: '',
         password: ''
     });
-
 
     function login(e) {
         e.preventDefault();
@@ -29,9 +32,19 @@ export default function PageLogin() {
 
         const promise = axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login', { ...userLogin });
         promise.then(response => {
-            navigate('/hoje');
+            //navigate('/hoje');
             setLoading(false);
             setUser(response.data);
+
+            const person = {
+                id: response.data.id,
+                name: response.data.name,
+                email: response.data.email,
+                image: response.data.image,
+                token: response.data.token
+            }
+            localStorage.setItem('userLogged', JSON.stringify(person));
+
         });
         promise.catch(err => {
             setLoading(false);
@@ -46,7 +59,6 @@ export default function PageLogin() {
     return (
         <Container>
             <img src={logo} alt="Logo App" />
-            <ToastContainer position="top-right" />
 
             <form>
                 <input type="email" placeholder="E-mail" value={userLogin.email} name="email" onChange={ChangeInput} />
@@ -55,11 +67,12 @@ export default function PageLogin() {
                 {loading === false ? (
                     <Button type={'submit'} text={'Entrar'} destiny={''} action={login} />
                 ) : (
-                    <Loader type="Rings" color="#52B6FF" height={100} width={100} />
+                    <Loader type="ThreeDots" color="#52B6FF" height={100} width={100} />
                 )}
             </form>
 
             <Button loading={loading} type={'button'} text={'Não tem uma conta? cadastre-se!'} destiny={'/cadastro'} />
+            <ToastContainer limit={1} />
         </ Container>
     )
 }

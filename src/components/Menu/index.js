@@ -7,7 +7,7 @@ export default function Menu() {
             <Container>
                 <Link to='/habitos'>Hábitos</Link>
                 <Link to='/historico'>Histórico</Link>
-                <Button>Hoje</Button>
+                <Button to='/hoje'><span>Hoje</span></Button>
             </Container>
         </>
 

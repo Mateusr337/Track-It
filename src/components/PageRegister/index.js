@@ -54,11 +54,11 @@ export default function PageRegister() {
                 {loading === false ? (
                     <Button type={'submit'} text={'Cadastrar'} destiny={''} action={register} />
                 ) : (
-                    <Loader type="Rings" color="#52B6FF" height={100} width={100} />
+                    <Loader type="ThreeDots" color="#52B6FF" height={100} width={100} />
                 )}
             </form>
 
-            <Button type="button" text={'Já tem uma conta? Faça login'} destiny={'/'} />
+            <Button loading={loading} type="button" text={'Já tem uma conta? Faça login'} destiny={'/'} />
         </ Container>
     )
 }

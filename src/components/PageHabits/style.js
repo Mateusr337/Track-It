@@ -24,4 +24,8 @@ border-radius: 4.63636px;
 display: flex;
 justify-content: center;
 align-items: center;
+
+&:hover{
+    cursor: pointer;
+}
 `
