@@ -1,21 +1,27 @@
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import { useAuth } from "../../Providers/auth";
+import axios from "axios";
 import Button from "../Button";
-import { Container } from "./style";
 import Loader from "react-loader-spinner";
 import logo from '../../assets/logo.png';
+
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { Container } from "./style";
 
 
-export default function PageLogin({ loading, setLoading, setUserData }) {
+export default function PageLogin() {
 
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+    const { setUser } = useAuth();
+
     const [userLogin, setUserLogin] = useState({
         email: '',
         password: ''
     });
+
 
     function login(e) {
         e.preventDefault();
@@ -25,7 +31,7 @@ export default function PageLogin({ loading, setLoading, setUserData }) {
         promise.then(response => {
             navigate('/hoje');
             setLoading(false);
-            setUserData(response.data);
+            setUser(response.data);
         });
         promise.catch(err => {
             setLoading(false);

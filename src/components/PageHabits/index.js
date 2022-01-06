@@ -1,9 +1,9 @@
-import BildHabit from "../BildHabit";
 import Header from "../Header";
 import Menu from "../Menu";
 import Title from "../Title";
-import { Container, Top, CreateHabit } from './style';
 import Habit from "../Habit";
+
+import { Container, Top, CreateHabit } from './style';
 import { AddOutline } from 'react-ionicons';
 
 
