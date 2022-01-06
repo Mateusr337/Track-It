@@ -1,15 +1,33 @@
+import BildHabit from "../BildHabit";
 import Header from "../Header";
 import Menu from "../Menu";
 import Title from "../Title";
-import { Container } from './style';
+import { Container, Top, CreateHabit } from './style';
+import Habit from "../Habit";
+import { AddOutline } from 'react-ionicons';
 
 
 export default function PageHabits() {
+
     return (
         <Container>
             <Header />
-            <Title text={'Histórico'} />
-            <span>Em breve você poderá ver o histórico dos seus hábitos aqui!</span>
+            <Top>
+                <Title text={"Meus hábitos"} />
+                <CreateHabit>
+                    <AddOutline
+                        color='#fff'
+                        width="25px"
+                    />
+                </CreateHabit>
+            </Top>
+
+            <Habit />
+            <Habit />
+            <Habit />
+            <Habit />
+
+            {/* <BildHabit /> */}
             <Menu />
         </Container>
     )
