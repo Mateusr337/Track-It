@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
 width: 90vw;
 height: 94px;
-padding: 5%;
+padding: 20px;
 
 background: #FFFFFF;
 border-radius: 5px;
@@ -41,4 +41,8 @@ height: 69px;
 background: #EBEBEB;
 border: 1px solid #E7E7E7;
 border-radius: 5px;
+
+&:hover{
+    cursor: pointer;
+}
 `
