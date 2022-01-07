@@ -39,10 +39,19 @@ width: 69px;
 height: 69px;
 
 background: #EBEBEB;
+${props => props.task.done && 'background: #8FC549;'}
 border: 1px solid #E7E7E7;
 border-radius: 5px;
 
 &:hover{
     cursor: pointer;
 }
+`
+
+export const CurrentSequence = styled.span`
+${props => props.task.done && 'color: #8FC549'}
+`
+
+export const HighestSequence = styled.span`
+${props => (props.task.currentSequence === props.task.highestSequence && props.task.done) && 'color: #8FC549'}
 `

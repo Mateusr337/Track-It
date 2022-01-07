@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-export default function Title({ text, description }) {
+export default function Title({ text, description, finishedTasks }) {
+
     return (
-        <Container>
+        <Container finishedTasks={finishedTasks}>
             <h1>{text}</h1>
             <span>{description}</span>
         </Container>
@@ -28,5 +29,6 @@ const Container = styled.div`
         font-size: 17.976px;
         line-height: 22px;
         color: #BABABA;
+        ${props => props.finishedTasks !== 0 && 'color: #8FC549;'}
     }
 `

@@ -7,6 +7,7 @@ import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { useAuth } from "../../Providers/auth";
 import axios from "axios";
+import Menssage from "../Message-PageEmpty";
 
 
 export default function PageToday() {
@@ -14,6 +15,8 @@ export default function PageToday() {
     const daysOfWeek = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
     const { user } = useAuth();
     const [tasks, setTasks] = useState([]);
+    const [subtitle, setSubtitle] = useState('Nenhum Hábito concluido ainda!');
+    const [numberFinishedTasks, setNumberFinishedTasks] = useState(0);
 
     useEffect(() => {
         if (user) {
@@ -21,20 +24,35 @@ export default function PageToday() {
                 { headers: { 'Authorization': `Bearer ${user.token}` } }
             );
             promise.then(response => {
+                const numberHabits = response.data.length;
+                let finishedTasks = 0;
                 setTasks(response.data);
+
+                response.data.forEach(task => {
+                    task.done && finishedTasks++;
+                })
+
+                if (finishedTasks !== 0) {
+                    let percentage = (finishedTasks / numberHabits) * 100;
+                    setSubtitle(`${percentage}% dos hábitos concluídos!`);
+                    setNumberFinishedTasks(finishedTasks);
+                };
             })
         }
-    }, [user])
+    }, [user]);
 
     return (
         <Container>
             <Header />
-            <Title text={`${daysOfWeek[dayjs().day()]}, ${dayjs().format('DD/MM')}`} description={'Nenhum Hábito concluido ainda'} />
+            <Title text={`${daysOfWeek[dayjs().day()]}, ${dayjs().format('DD/MM')}`} description={subtitle} finishedTasks={numberFinishedTasks} />
             <Tasks>
                 {tasks.length !== 0 && (
-                    tasks.map(task => <Task key={task.id} task={task} />)
+                    tasks.map(task => (<Task key={task.id} task={task} />))
                 )}
             </Tasks>
+            {tasks.length === 0 && (
+                <Menssage text={"Você não tem nenhum hábito ainda, vá até 'Hábitos' e crie um para começar! :)"} />
+            )}
             <Menu />
         </ Container>
     )
