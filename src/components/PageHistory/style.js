@@ -12,4 +12,5 @@ padding: 20px;
 
 display: flex;
 justify-content: center;
+box-sizing: border-box;
 `

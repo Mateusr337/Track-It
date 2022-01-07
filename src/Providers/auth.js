@@ -5,6 +5,7 @@ export const AuthContext = React.createContext({});
 export const AuthProvider = (props) => {
     const [user, setUser] = useState(null);
     const [progress, setProgress] = useState(null);
+    const [navbar, setNavbar] = useState(false);
 
     useEffect(() => {
         if (localStorage.getItem('userLogged')) {
@@ -15,7 +16,7 @@ export const AuthProvider = (props) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ user, setUser, progress, setProgress }}>
+        <AuthContext.Provider value={{ user, setUser, progress, setProgress, navbar, setNavbar }}>
             {props.children}
         </AuthContext.Provider>
     )

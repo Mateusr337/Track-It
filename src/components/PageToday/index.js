@@ -39,7 +39,7 @@ export default function PageToday() {
                 };
             })
         }
-    }, [user]);
+    }, [user, setProgress]);
 
     return (
         <Container>
@@ -51,7 +51,7 @@ export default function PageToday() {
                 )}
             </Tasks>
             {tasks.length === 0 && (
-                <Menssage text={"Você não tem nenhum hábito ainda, vá até 'Hábitos' e crie um para começar! :)"} />
+                <Menssage text={"Você não tem nenhum hábito cadastrado para hoje ainda. Click em 'Hábitos' e crie um novo para começar! :)"} />
             )}
             <Menu />
         </ Container>
