@@ -5,12 +5,16 @@ import Header from "../Header";
 import Menu from "../Menu";
 import Menssage from "../Message-PageEmpty";
 import Title from "../Title";
-import { Container, ContainerCalendar } from './style';
+import { Container, ContainerCalendar, CalendarStyle } from './style';
 
 
 export default function PageHistory() {
 
-    const [value, onChange] = useState(new Date());
+    const [date, setDate] = useState(new Date());
+
+    const onChange = date => {
+        setDate(date);
+    }
 
     return (
         <Container>
@@ -19,8 +23,9 @@ export default function PageHistory() {
             <Menssage text={'Em breve você poderá ver o histórico dos seus hábitos aqui!'} />
             <ContainerCalendar>
                 <Calendar
+                    className={'CalendarStyle'}
                     onChange={onChange}
-                    value={value}
+                    value={date}
                 />
             </ContainerCalendar>
             <Menu />

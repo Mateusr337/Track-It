@@ -31,6 +31,7 @@ a{
 export const Button = styled(Link)`
 width: 91px;
 height: 91px;
+padding: 5px;
 
 background: #52B6FF;
 border-radius: 50%;
@@ -44,8 +45,4 @@ margin: auto;
 display: flex;
 justify-content: center;
 align-items: center;
-
-span {
-    color: #FFFFFF;
-}
 `

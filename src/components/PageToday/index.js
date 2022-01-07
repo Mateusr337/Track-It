@@ -9,11 +9,10 @@ import { useAuth } from "../../Providers/auth";
 import axios from "axios";
 import Menssage from "../Message-PageEmpty";
 
-
 export default function PageToday() {
 
     const daysOfWeek = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
-    const { user } = useAuth();
+    const { user, setProgress } = useAuth();
     const [tasks, setTasks] = useState([]);
     const [subtitle, setSubtitle] = useState('Nenhum Hábito concluido ainda!');
     const [numberFinishedTasks, setNumberFinishedTasks] = useState(0);
@@ -35,6 +34,7 @@ export default function PageToday() {
                 if (finishedTasks !== 0) {
                     let percentage = (finishedTasks / numberHabits) * 100;
                     setSubtitle(`${percentage}% dos hábitos concluídos!`);
+                    setProgress(percentage);
                     setNumberFinishedTasks(finishedTasks);
                 };
             })
