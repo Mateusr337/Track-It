@@ -100,7 +100,6 @@ export default function PageHistory() {
         <Container>
             <Header />
             <Title text={'Histórico'} />
-            <Menssage text={'Em breve você poderá ver o histórico dos seus hábitos aqui!'} />
 
             <ContainerCalendar>
                 <Calendar
