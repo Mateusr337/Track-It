@@ -15,7 +15,7 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    index: 10;
+    z-index: 10;
 
     img {
         height: 40px;
