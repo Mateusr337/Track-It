@@ -17,3 +17,15 @@ export const Tasks = styled.div`
     gap: 10px;
 `
 
+export const LoaderConatiner = styled.div`
+width: 100vw;
+height: 300px;
+color: #52B6FF;
+font-size: 25px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+`
+

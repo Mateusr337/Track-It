@@ -28,13 +28,13 @@ export default function PageHistory() {
                 { headers: { 'Authorization': `Bearer ${user.token}` } }
             );
             promise.then(response => {
+                console.log(response);
                 setHabitsHistoric(response.data);
                 let dateArray = [];
                 let dates = [];
 
                 response.data.forEach(data => {
                     data.habits.forEach(habit => {
-                        console.log(convertDate(habit.date).dateFormat3)
                         convertDate(habit.date).dateFormat3 !== dayjs().format('DD/MM/YYYY') && dates.push(convertDate(habit.date).dateFormat3);
                         let className = verificationHabits(habit);
                         if (convertDate(habit.date).dateFormat3 !== dayjs().format('DD/MM/YYYY')) {
