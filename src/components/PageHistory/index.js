@@ -6,10 +6,9 @@ import 'react-calendar/dist/Calendar.css';
 import { useAuth } from "../../Providers/auth";
 import Header from "../Header";
 import Menu from "../Menu";
-import Menssage from "../Message-PageEmpty";
 import Title from "../Title";
 import Day from "../DayHistoric";
-import { Container, ContainerCalendar, ContainerDays, DateSelected } from './style';
+import { Container, ContainerCalendar, ContainerDays, DateSelected, styleCalendar } from './style';
 
 
 export default function PageHistory() {
@@ -103,6 +102,7 @@ export default function PageHistory() {
 
             <ContainerCalendar>
                 <Calendar
+                    className={styleCalendar}
                     value={date}
                     locale="pt-Br"
                     onChange={onChange}
