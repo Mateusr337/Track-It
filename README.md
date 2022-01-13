@@ -1,6 +1,6 @@
 # Track-It
 
-##About
+## About
 
 This project is a habit tracking app, where you can create habits, see the habits of the day, interact with their current status and see their progress over time.
 
@@ -10,7 +10,7 @@ This project is a habit tracking app, where you can create habits, see the habit
 -Tracking habits
 -history of habits
 
-##Technologies
+## Technologies
 
 React, HTML, CSS, styled-conponents, JSX, ContextAPI, axios, react-calendar ... 
 
