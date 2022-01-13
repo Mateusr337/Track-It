@@ -4,11 +4,11 @@
 
 This project is a habit tracking app, where you can create habits, see the habits of the day, interact with their current status and see their progress over time.
 
--single-page-aplication
--Sign-up
--Login
--Tracking habits
--history of habits
+-single-page-aplication \n
+-Sign-up \n
+-Login \n
+-Tracking habits \n
+-history of habits \n
 
 ## Technologies
 
