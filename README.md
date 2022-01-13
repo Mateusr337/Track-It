@@ -1,21 +1,25 @@
 # Track-It
 
 ##About
+
 This project is a habit tracking app, where you can create habits, see the habits of the day, interact with their current status and see their progress over time.
+
+-single-page-aplication
 -Sign-up
 -Login
 -Tracking habits
 -history of habits
 
 ##Technologies
+
 React, HTML, CSS, styled-conponents, JSX, ContextAPI, axios, react-calendar ... 
 
-##
-
 ## Getting Started with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
 In the project directory, you can run:
 
 ### `npm start`
