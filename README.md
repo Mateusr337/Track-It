@@ -1,5 +1,7 @@
 # Track-It
 
+![Track-it](https://user-images.githubusercontent.com/92904799/149540180-2d0e5902-8026-40e2-b05a-015a08c6c9b8.gif)
+
 ## About
 
 This project is a habit tracking app, where you can create habits, see the habits of the day, interact with their current status and see their progress over time.
