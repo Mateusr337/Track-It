@@ -32,7 +32,7 @@ export default function PageLogin() {
 
         const promise = axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login', { ...userLogin });
         promise.then(response => {
-            //navigate('/hoje');
+            navigate('/hoje');
             setLoading(false);
             setUser(response.data);
 
