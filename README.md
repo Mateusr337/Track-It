@@ -17,6 +17,7 @@ Habit control application, where you can create, delete and view the history of 
   <img style='margin: 5px;' src="https://img.shields.io/badge/context api%20-%2320232a.svg?&style=for-the-badge&color=61DAFB&logo=react&logoColor=000000"/>
   <img style='margin: 5px;' src="https://img.shields.io/badge/axios%20-%2320232a.svg?&style=for-the-badge&color=363636&logo=axios&logoColor=E34F26"/>
   <img style='margin: 5px;' src="https://img.shields.io/badge/react calendar%20-%2320232a.svg?&style=for-the-badge&color=363636&logo=react calendar&logoColor=E34F26"/>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/Vercel%20-%2320232a.svg?&style=for-the-badge&color=000000&logo=Vercel&logoColor=ffffff"/>
 </div>
 
 ## How to run 
