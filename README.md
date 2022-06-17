@@ -2,11 +2,11 @@
 
 <img src='src/assets/Track-it.gif' alt='video os aplication'>
 
-## About
+## Sobre
 
-Habit control application, where you can create, delete and view the history of habits.
+Aplicativo onde poddemos controlar diariamente nossos hábitos ver qual concluimos e quais faltam, podemos separa por dias da semana cada hábito e ver histórco de progresso.
 
-## Technologies
+## Tecnologias
 
 <div>
     <img style='margin: 5px;' src="https://img.shields.io/badge/javascript%20-%2320232a.svg?&style=for-the-badge&color=F7DF1E&logo=javascript&logoColor=000000" />
@@ -20,10 +20,10 @@ Habit control application, where you can create, delete and view the history of 
   <img style='margin: 5px;' src="https://img.shields.io/badge/Vercel%20-%2320232a.svg?&style=for-the-badge&color=000000&logo=Vercel&logoColor=ffffff"/>
 </div>
 
-## How to run 
+## Executar
 
-- First clone this repository
+- Primeiro clone esse projeto
 
-- Run ```npm i```
+- Rode ```npm i```
 
-- Run ```npm run start```
+- Rode ```npm run start```
